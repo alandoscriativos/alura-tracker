@@ -23,7 +23,7 @@
                         <span class="icon">
                             <i class="fas fa-stop"></i>
                         </span>
-                        <span>stop-</span>
+                        <span>stop</span>
                     </button>
                 </div>
             </div>
@@ -41,25 +41,23 @@ export default defineComponent({
     data (){
         return{
             tempoEmSegundos: 0,
+            cronometro: 0,
         }
     },
     computed: {
         tempoDecorrido(): string{
-            return new Date (this.tempoEmSegundos * 1000).toISOString ().substr (11, 8)
-        }
+                return new Date (this.tempoEmSegundos * 1000).toISOString ().substr (11, 8)
+            }
     },
     methods: {
-        iniciar (){
-            //Começar a contagem
-            //1 seg = 1000 milisegundos ou ms
-            setInterval(() => {
-                this.tempoEmSegundos += 1
+        iniciar(){
+            this.cronometro = setInterval(() => { 
+                this.tempoEmSegundos += 1;
             }, 1000)
-            console.log('iniciar');
         },
-        finalizar (){
-            console.log('finalizar');
-        }
+        finalizar(){ 
+            clearInterval(this.cronometro);
+        },
     }
 })
 
