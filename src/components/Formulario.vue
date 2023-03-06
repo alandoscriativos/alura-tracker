@@ -23,7 +23,7 @@
                         <span class="icon">
                             <i class="fas fa-stop"></i>
                         </span>
-                        <span>stop</span>
+                        <span>stop-</span>
                     </button>
                 </div>
             </div>
