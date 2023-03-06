@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>
-            <img src="../assests/logo.png" alt="Logo"/>
+            <img src="../assets/logo.png" alt="Logo"/>
         </h1>
     </header>
 
